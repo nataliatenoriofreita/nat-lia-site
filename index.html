@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Agro Forte & Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- ESTILOS INTERATIVOS E ANIMAÇÕES AVANÇADAS --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #f4f7f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* 1. Capa com Gradiente Animado */
+        .capa {
+            background: linear-gradient(-45deg, #1e824c, #27ae60, #3498db, #2ecc71);
+            background-size: 400% 400%;
+            animation: gradienteAnimado 15s ease infinite;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        @keyframes gradienteAnimado {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .conteudo-capa h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            animation: flutuar 3s ease-in-out infinite;
+        }
+
+        @keyframes flutuar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Botão Ultra Chamativo */
+        .btn-conhecer {
+            background-color: #ffffff;
+            color: #27ae60;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+
+        .btn-conhecer:hover {
+            transform: scale(1.1);
+            background-color: #f1c40f;
+            color: #333;
+            box-shadow: 0 15px 25px rgba(241, 196, 15, 0.4);
+        }
+
+        /* 2. Seção de Estatísticas de Impacto */
+        .impacto-dados {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background: #ffffff;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: -30px;
+            border-radius: 15px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .dado-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .dado-card h3 {
+            font-size: 36px;
+            margin: 0;
+            color: #27ae60;
+        }
+
+        .dado-card p {
+            margin: 5px 0 0;
+            color: #777;
+            font-weight: 500;
+        }
+
+        /* 3. Layout de Tecnologias Interativas (Cards Dinâmicos) */
+        .container-tecnologias {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .tech-box {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        /* Efeitos Individuais de Cores Neon no Hover */
+        .tech-box[data-cor="verde"]:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(46, 204, 113, 0.2);
+            border-left: 8px solid #2ecc71;
+        }
+
+        .tech-box[data-cor="azul"]:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+            border-left: 8px solid #3498db;
+        }
+
+        .tech-box[data-cor="amarelo"]:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(241, 196, 15, 0.3);
+            border-left: 8px solid #f1c40f;
+        }
+
+        .tech-icone {
+            font-size: 60px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* Estilização das Imagens */
+        .tech-imagem {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .tech-info {
+            flex: 1;
+        }
+
+        .tech-info h2 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .tech-info p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Inverter ordem alternada para ficar dinâmico */
+        .tech-box:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            .tech-box, .tech-box:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+            .tech-imagem {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SEÇÃO DA CAPA COM ANIMAÇÃO -->
+    <section class="capa">
+        <div class="interface">
+            <header>
+                <div class="logo">🌱 Agrinho <span>2026</span></div>
+            </header>
+            <div class="conteudo-capa">
+                <h1>Agro Forte, Futuro Sustentável</h1>
+                <p style="font-size: 19px; opacity: 0.9;">Descubra como a tecnologia e a natureza trabalham juntas. Passe o mouse nos blocos abaixo!</p>
+                <button class="btn-conhecer" onclick="document.getElementById('tech-start').scrollIntoView({behavior: 'smooth'});">Explorar Tecnologias</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE COMPONENTES DE IMPACTO (DADOS DINÂMICOS) -->
+    <section class="impacto-dados">
+        <div class="dado-card">
+            <h3>-50%</h3>
+            <p>Desperdício de Água</p>
+        </div>
+        <div class="dado-card">
+            <h3>100%</h3>
+            <p>Energia Limpa</p>
+        </div>
+        <div class="dado-card">
+            <h3>24/7</h3>
+            <p>Monitoramento Aéreo</p>
+        </div>
+    </section>
+
+    <!-- INTRODUÇÃO CONTEXTUAL -->
+    <section class="introducao" style="padding: 60px 20px; text-align: center;">
+        <div class="interface" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: #1e824c; font-size: 32px; margin-bottom: 20px;">A Força do Campo unida à Preservação</h2>
+            <p style="color: #666; font-size: 18px; line-height: 1.8;">
+                O agronegócio moderno exige inteligência. Produzir em larga escala preservando nossos ecossistemas não é apenas possível, é a realidade do nosso futuro. Conheça as engrenagens dessa transformação:
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CONTEÚDO SUPER INTERATIVO -->
+    <section class="container-tecnologias" id="tech-start">
+
+        <!-- Bloco 1: Drones (Com a imagem enviada!) -->
+        <div class="tech-box" data-cor="verde">
+            <img src="250715_DronesAgrícolas_Rafael_Soares_drone pulverizando.jpg" alt="Drone na agricultura" class="tech-imagem">
+            <div class="tech-info">
+                <h2 style="color: #2ecc71;">🛸 Drones Vigilantes</h2>
+                <p><strong>Olhos atentos voando pelo futuro da sua plantação.</strong></p>
+                <p>Equipados com sensores multiespectrais inteligentes, eles sobrevoam a lavoura escaneando folha por folha. Identificam pragas, falta de nutrientes e focos de seca antes mesmo do olho humano notar, permitindo ações cirúrgicas que economizam defensivos químicos e protegem o solo.</p>
+            </div>
+        </div>
+
+        <!-- Bloco 2: Água -->
+        <div class="tech-box" data-cor="azul">
+            <img src="irrigacao-com-drip-protection-economia-de-agua-e-aplicacao-precisa-de-insumos.webp" alt="irr" class="tech-imagem">
+            <div class="tech-info">
+                <h2 style="color: #3498db;">💧 Gota a Gota</h2>
+                <p><strong>A engenharia perfeita da irrigação milimétrica.</strong></p>
+                <p>Esqueça os antigos canhões de água que inundavam e desgastavam a terra. O sistema de gotejamento computadorizado se conecta a sensores enterrados nas raízes. O sistema só abre quando a umidade cai abaixo do ideal, aplicando a gota exata direto na base da planta.</p>
+            </div>
+        </div>
+
+        <!-- Bloco 3: Sol -->
+        <div class="tech-box" data-cor="amarelo">
+            <img src="images.jpeg" alt="Painéis solares na fazenda" class="tech-imagem">
+            <div class="tech-info">
+                <h2 style="color: #f39c12;">☀️ Energia Solar</h2>
+                <p><strong>Colhendo a luz solar para mover as máquinas do agro.</strong></p>
+                <p>As fazendas do futuro usam o céu a seu favor. Painéis solares fotovoltaicos geram energia limpa e 100% renovável para alimentar as bombas d'água, cercas de manejo e sensores de campo. Uma cadeia produtiva autossustentável que reduz custos e zera a emissão de carbono.</p>
+            </div>
+        </div><a href="https://blog.humberseguros.com.br/post/energia-solar-rural/" target="_blank">Fonte da imagem</a>
+    </div><a href="https://aegro.com.br/blog/irrigacao-com-drip-protection/" target="_blank">Fonte da imagem</a>
+</div><a href="https://www.embrapa.br/documents/10180/97848192/250715_DronesAgr%C3%ADcolas_Rafael_Soares_foto+da+capa+da+publica%C3%A7%C3%A3o.png/8893e591-80c3-657c-2f26-78689ed09b9a?t=1752266375502" target="_blank">Fonte da imagem</a>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
