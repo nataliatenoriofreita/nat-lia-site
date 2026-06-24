@@ -1,0 +1,175 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f7f4;
+    color: #333;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Capa com Degradê Verde e Azul */
+.capa {
+    background: linear-gradient(135deg, #1600db, #0083b0, #11998e, #38ef7d);
+    background-size: 300% 300%;
+    animation: gradientBg 10s ease infinite;
+    color: white;
+    padding: 40px 0 100px 0;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+}
+
+@keyframes gradientBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header span {
+    color: #fffb00;
+}
+
+.conteudo-capa {
+    margin-top: 60px;
+}
+
+.conteudo-capa h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.conteudo-capa p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Botão Chamativo */
+.btn-participar {
+    background-color: #fffb00;
+    color: #004d40;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-participar:hover {
+    transform: scale(1.05);
+    background-color: #ffe600;
+}
+
+/* Grid de Cards Interativos */
+.interacoes {
+    margin-top: -50px;
+    padding-bottom: 60px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(17, 153, 142, 0.3);
+    border-color: #11998e;
+}
+
+.card .icone {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #0e004d;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Caixa de Informação Dinâmica */
+.caixa-info {
+    margin-top: 40px;
+    background: #004d40;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: surgindo 0.4s ease;
+}
+
+.caixa-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fffb00;
+}
+
+.caixa-info button {
+    margin-top: 15px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.caixa-info button:hover {
+    background: white;
+    color: #004d40;
+}
+
+.escondido {
+    display: none;
+}
+
+@keyframes surgindo {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
